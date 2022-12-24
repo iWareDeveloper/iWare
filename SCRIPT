@@ -1,0 +1,78 @@
+-- Made with love by iEge.
+-- You can use it without giving us a credit.
+-- iWare v1
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("                                         ⊙ iWare BETA ⊙", "BloodTheme")
+
+-- MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Thank you for using iWare BETA!")
+
+MainSection:NewKeybind("GUI Toggle", "Sets a keybind to turn the GUI on/off.", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+
+-- PLAYER
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player Section - iWare")
+
+PlayerSection:NewButton("Fly", "Allows you to fly!", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/fPtT2Q1F'))()
+end)
+
+PlayerSection:NewToggle("WalkSpeed Changer", "Makes you walk so fast! ", function(state)
+    if state then
+        game.Players.localPlayer.Character.Humanoid.WalkSpeed = 130
+    else
+        game.Players.localPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+
+PlayerSection:NewToggle("JumpHeight Changer", "Makes you jump even more higher!", function(state)
+if state then
+        game.Players.localPlayer.Character.Humanoid.JumpPower = 130
+    else
+        game.Players.localPlayer.Character.Humanoid.JumpPower = 50
+    end
+end) 
+
+PlayerSection:NewButton("Wall Walk", "Allows you to walk on walls just like spiders!", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/tsjL7U8e'))()
+end)
+
+-- VISUALS
+local Visuals = Window:NewTab("Visuals")
+local VisualsSection = Visuals:NewSection("Visual Section - iWare")
+
+VisualsSection:NewButton("Chams ( Team Check )", "It allows you to see your opponents through walls.", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/1HXRcaqg'))()
+end)
+
+VisualsSection:NewButton("Chams ( No Team Check )", "It allows you to see everyone through walls.", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/JuH4mcNv'))()
+end)
+
+-- CHAT
+local Chat = Window:NewTab("Chat")
+local ChatSection = Chat:NewSection("Chat Section - iWare")
+
+ChatSection:NewButton("Chat Spoofer", "Basic Chat Spoofer.", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/djBfk8Li'))()
+end)
+
+ChatSection:NewButton("Infinity Yield", "FE Admin Commands runner.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+-- OTHER SCRIPTS
+local OtherScripts = Window:NewTab("Other Scripts")
+local OtherScriptsSection = OtherScripts:NewSection("Other Scripts - iWare")
+
+OtherScriptsSection:NewButton("Owl Hub", "Powerful cheat hub that supports over 30+ games.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt'))()
+end)
+
+OtherScriptsSection:NewButton("EmoteHUB", "Emote GUI with a lot of emotes.", function()
+    loadstring(game:HttpGet("https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/R15GUI.lua"))()
+end)
