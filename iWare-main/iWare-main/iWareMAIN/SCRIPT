@@ -13,6 +13,14 @@ MainSection:NewKeybind("GUI Toggle", "Sets a keybind to turn the GUI on/off.", E
 	Library:ToggleUI()
 end)
 
+-- AIM
+local Aim = Window:NewTab("⊙ Aim")
+local AimSection = Aim:NewSection("Aim Section - iWare")
+
+AimSection:NewButton("Aimlock ( No Team Check )", "Locks your camera into your opponents head!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/AIMLOCK.TC'))()
+end)
+
 -- PLAYER
 local Player = Window:NewTab("⊙ Player")
 local PlayerSection = Player:NewSection("Player Section - iWare")
