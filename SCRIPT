@@ -49,8 +49,20 @@ VisualsSection:NewButton("Chams ( Team Check )", "It allows you to see your oppo
     loadstring(game:HttpGet('https://pastebin.com/raw/1HXRcaqg'))()
 end)
 
-VisualsSection:NewButton("Chams ( No Team Check )", "It allows you to see everyone through walls.", function()
+VisualsSection:NewButton("Chams ( No Team Check )", "It allows you to see everyones name through walls.", function()
     loadstring(game:HttpGet('https://pastebin.com/raw/JuH4mcNv'))()
+end)
+
+VisualsSection:NewButton("ESP ( Team Check )", "It allows you to see your opponents name through walls.", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/ZLMe2rna'))()
+end)
+
+VisualsSection:NewButton("ESP ( No Team Check )", "It allows you to see your everyones name through walls.", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/ZLMe2rna'))()
+end)
+
+VisualsSection:NewButton("Triggerbot", "Automaticly shoots when you aim at someone.", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/XP1YZGJW'))()
 end)
 
 -- CHAT
@@ -76,3 +88,4 @@ end)
 OtherScriptsSection:NewButton("EmoteHUB", "Emote GUI with a lot of emotes.", function()
     loadstring(game:HttpGet("https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/R15GUI.lua"))()
 end)
+ 
