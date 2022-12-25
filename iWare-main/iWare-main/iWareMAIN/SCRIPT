@@ -41,6 +41,10 @@ PlayerSection:NewButton("Wall Walk", "Allows you to walk on walls just like spid
     loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/WALLWALK'))()
 end)
 
+PlayerSection:NewButton("Click Teleport ( CTRL + CLICK )", "Allows you to teleport anywhere u like!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/CLICKTP'))()
+end)
+
 -- VISUALS
 local Visuals = Window:NewTab("⊙ Visuals")
 local VisualsSection = Visuals:NewSection("Visual Section - iWare")
