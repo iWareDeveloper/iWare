@@ -5,11 +5,8 @@
 
 local ScreenGui = Instance.new("ScreenGui")
 local Aimbot = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
-local UICorner_2 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
 local Toggle = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
 
 --Properties:
 
@@ -19,64 +16,56 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Aimbot.Name = "Aimbot"
 Aimbot.Parent = ScreenGui
 Aimbot.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Aimbot.Position = UDim2.new(0, 0, 0.380434781, 0)
-Aimbot.Size = UDim2.new(0, 100, 0, 100)
+Aimbot.Position = UDim2.new(0.0599842146, 0, 0.358722359, 0)
+Aimbot.Size = UDim2.new(0, 126, 0, 152)
 
-UICorner.Parent = Aimbot
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.Position = UDim2.new(-7.09579151e-09, 0, 0.380434781, 0)
-TextLabel.Size = UDim2.new(0, 100, 0, 50)
-TextLabel.Font = Enum.Font.Unknown
-TextLabel.Text = "iWare Aimlock"
-TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel.TextSize = 17.000
-TextLabel.TextWrapped = true
-
-UICorner_2.Parent = TextLabel
+Title.Name = "Title"
+Title.Parent = Aimbot
+Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title.Size = UDim2.new(0, 126, 0, 50)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "iWare Aimlock"
+Title.TextColor3 = Color3.fromRGB(255, 0, 0)
+Title.TextSize = 20.000
 
 Toggle.Name = "Toggle"
-Toggle.Parent = ScreenGui
+Toggle.Parent = Aimbot
 Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle.Position = UDim2.new(-0.000930052483, 0, 0.472860783, 0)
-Toggle.Size = UDim2.new(0, 100, 0, 50)
-Toggle.Font = Enum.Font.Unknown
+Toggle.BorderSizePixel = 0
+Toggle.Position = UDim2.new(0, 0, 0.473684222, 0)
+Toggle.Size = UDim2.new(0, 126, 0, 50)
+Toggle.Font = Enum.Font.SourceSans
 Toggle.Text = "Off"
 Toggle.TextColor3 = Color3.fromRGB(255, 0, 0)
-Toggle.TextSize = 21.000
-
-UICorner_3.Parent = Toggle
+Toggle.TextSize = 40.000
 
 -- Scripts:
 
-local function MJWK_fake_script() -- Toggle.LocalScript 
+local function PNHLOYF_fake_script() -- Toggle.LocalScript 
 	local script = Instance.new('LocalScript', Toggle)
 
 	_G.aimbot = false
 	local camera = game.Workspace.CurrentCamera
 	local localplayer = game:GetService("Players").LocalPlayer
 	
-	script.Parent.MouseButtonClick:Connect(function()
+	script.Parent.MouseButton1Click:Connect(function()
 		if _G.aimbot == false then
 			_G.aimbot = true
 			script.Parent.TextColor3 = Color3.fromRGB(0,255,0)
 			script.Parent.Text = "On"
 			function closestplayer()
-				local dist = math.huge
-				local target = nil
+				local dist = math.huge -- math.huge means a really large number, 1M+.
+				local target = nil --- nil means no value
 				for i,v in pairs (game:GetService("Players"):GetPlayers()) do
 					if v ~= localplayer then
-						if v.Character and v.Character:FindFirstChild("Head") and v.TeamColor ~= localplayer.TeamColor and _G.aimbot then
+						if v.Character and v.Character:FindFirstChild("Head") and _G.aimbot and v.Character.Humanoid.Health > 0 then --- creating the checks
 							local magnitude = (v.Character.Head.Position - localplayer.Character.Head.Position).magnitude
 							if magnitude < dist then
 								dist = magnitude
 								target = v
 							end
 							
-						end 
+						end
 					end
 				end
 				return target
@@ -91,11 +80,10 @@ local function MJWK_fake_script() -- Toggle.LocalScript
 	
 	local settings = {
 		keybind = Enum.UserInputType.MouseButton2
-		
 	}
 	
 	local UIS = game:GetService("UserInputService")
-	local aiming = false
+	local aiming = false --- this toggle will make it so we lock on to the person when we press our keybind
 	
 	UIS.InputBegan:Connect(function(inp)
 		if inp.UserInputType == settings.keybind then
@@ -104,15 +92,15 @@ local function MJWK_fake_script() -- Toggle.LocalScript
 	end)
 	
 	UIS.InputEnded:Connect(function(inp)
-		if inp.UserInputType == settings.keybind then
+		if inp.UserInputType == settings.keybind then ---- when we stop pressing the keybind it would unlock off the player
 			aiming = false
 		end
 	end)
 	
 	game:GetService("RunService").RenderStepped:Connect(function()
 		if aiming then
-			camera.CFrame = CFrame.new(camera.CFrame.Position,closestplayer().Character.Head.Position)
+			camera.CFrame = CFrame.new(camera.CFrame.Position,closestplayer().Character.Head.Position) -- locks into the HEAD
 		end
 	end)
 end
-coroutine.wrap(MJWK_fake_script)()
+coroutine.wrap(PNHLOYF_fake_script)()
