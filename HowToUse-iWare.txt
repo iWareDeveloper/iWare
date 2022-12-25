@@ -1,0 +1,21 @@
+# iWare 2023 - 2024
+iWare - Advanced Roblox Cheat Script
+
+How to use iWare?
+
+Fisrt of all, that is a script which means you cannot use this script by running it. You have to download a minimum level 6 executor to use iWare.
+
+1 - Launch your executor. (KRNL, Evon, Synapse etc.)
+
+2 - Launch the game on roblox.
+
+3 - Open your executor and paste --- loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMAIN/SCRIPT'))()
+
+4 - Inject the executor to roblox.
+
+5 - Execute the script and you're done!
+
+Enjoy cheating in any game u wish!
+
+iWare Discord Server for help and suggestions!
+https://discord.io/iwarex
