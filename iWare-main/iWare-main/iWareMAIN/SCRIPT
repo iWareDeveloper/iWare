@@ -42,7 +42,7 @@ PlayerSection:NewButton("Wall Walk", "Allows you to walk on walls just like spid
 end)
 
 -- VISUALS
-local Visuals = Window:NewTab("Visuals")
+local Visuals = Window:NewTab("⊙ Visuals")
 local VisualsSection = Visuals:NewSection("Visual Section - iWare")
 
 VisualsSection:NewButton("Chams ( Team Check )", "It allows you to see your opponents through walls.", function()
@@ -66,7 +66,7 @@ VisualsSection:NewButton("Triggerbot", "Automaticly shoots when you aim at someo
 end)
 
 -- CHAT
-local Chat = Window:NewTab("Chat")
+local Chat = Window:NewTab("⊙ Chat")
 local ChatSection = Chat:NewSection("Chat Section - iWare")
 
 ChatSection:NewButton("Chat Spoofer", "Basic Chat Spoofer.", function()
@@ -78,7 +78,7 @@ ChatSection:NewButton("Infinity Yield", "FE Admin Commands runner.", function()
 end)
 
 -- SCRIPT HUB
-local ScriptHub = Window:NewTab("Script Hub")
+local ScriptHub = Window:NewTab("⊙ Script Hub")
 local ScriptHubSection = ScriptHub:NewSection("Script Hub - iWare")
 
 ScriptHubSection:NewButton("Owl Hub", "Powerful cheat hub that supports over 30+ games.", function()
