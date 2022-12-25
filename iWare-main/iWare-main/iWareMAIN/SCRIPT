@@ -18,7 +18,7 @@ local Aim = Window:NewTab("⊙ Aim")
 local AimSection = Aim:NewSection("Aim Section - iWare")
 
 AimSection:NewButton("Aimlock ( No Team Check )", "Locks your camera into your opponents head!", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/AIMLOCK.TC'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/AIMLOCK.NTC'))()
 end)
 
 -- PLAYER
