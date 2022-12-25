@@ -9,7 +9,7 @@ local Window = Library.CreateLib("                                         ⊙ɪ
 local Main = Window:NewTab("⊙ Main")
 local MainSection = Main:NewSection("Thank you for using iWare BETA!")
 
-MainSection:NewKeybind("⊙ GUI Toggle", "Sets a keybind to turn the GUI on/off.", Enum.KeyCode.F, function()
+MainSection:NewKeybind("GUI Toggle", "Sets a keybind to turn the GUI on/off.", Enum.KeyCode.F, function()
 	Library:ToggleUI()
 end)
 
