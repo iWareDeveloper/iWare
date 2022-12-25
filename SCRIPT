@@ -18,7 +18,7 @@ local Player = Window:NewTab("Player")
 local PlayerSection = Player:NewSection("Player Section - iWare")
 
 PlayerSection:NewButton("Fly", "Allows you to fly!", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/fPtT2Q1F'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/FLY'))()
 end)
 
 PlayerSection:NewToggle("WalkSpeed Changer", "Makes you walk so fast! ", function(state)
@@ -38,7 +38,7 @@ if state then
 end) 
 
 PlayerSection:NewButton("Wall Walk", "Allows you to walk on walls just like spiders!", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/tsjL7U8e'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/WALLWALK'))()
 end)
 
 -- VISUALS
@@ -46,15 +46,23 @@ local Visuals = Window:NewTab("Visuals")
 local VisualsSection = Visuals:NewSection("Visual Section - iWare")
 
 VisualsSection:NewButton("Chams ( Team Check )", "It allows you to see your opponents through walls.", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/1HXRcaqg'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/CHAMS.TC'))()
 end)
 
 VisualsSection:NewButton("Chams ( No Team Check )", "It allows you to see everyones name through walls.", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/JuH4mcNv'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/CHAMS.NTC'))()
+end)
+
+VisualsSection:NewButton("ESP ( Team Check )", "It allows yo to see your opponents name through walls.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/ESP.TC'))()
+end)
+
+VisualsSection:NewButton("ESP ( No Team Check )", "It allows yo to see everyones name through walls.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/ESP.NTC'))()
 end)
 
 VisualsSection:NewButton("Triggerbot", "Automaticly shoots when you aim at someone.", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/XP1YZGJW'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/TRIGGERBOT'))()
 end)
 
 -- CHAT
@@ -62,7 +70,7 @@ local Chat = Window:NewTab("Chat")
 local ChatSection = Chat:NewSection("Chat Section - iWare")
 
 ChatSection:NewButton("Chat Spoofer", "Basic Chat Spoofer.", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/djBfk8Li'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/CHATSPOOFER'))()
 end)
 
 ChatSection:NewButton("Infinity Yield", "FE Admin Commands runner.", function()
