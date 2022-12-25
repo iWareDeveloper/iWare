@@ -3,7 +3,7 @@
 -- iWare v1
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("                                         ⊙ iWare BETA ⊙", "BloodTheme")
+local Window = Library.CreateLib("                                         ⊙ɪᴡᴀʀᴇ ʙᴇᴛᴀ⊙", "BloodTheme")
 
 -- MAIN
 local Main = Window:NewTab("Main")
@@ -53,14 +53,6 @@ VisualsSection:NewButton("Chams ( No Team Check )", "It allows you to see everyo
     loadstring(game:HttpGet('https://pastebin.com/raw/JuH4mcNv'))()
 end)
 
-VisualsSection:NewButton("ESP ( Team Check )", "It allows you to see your opponents name through walls.", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/ZLMe2rna'))()
-end)
-
-VisualsSection:NewButton("ESP ( No Team Check )", "It allows you to see your everyones name through walls.", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/ZLMe2rna'))()
-end)
-
 VisualsSection:NewButton("Triggerbot", "Automaticly shoots when you aim at someone.", function()
     loadstring(game:HttpGet('https://pastebin.com/raw/XP1YZGJW'))()
 end)
@@ -77,15 +69,15 @@ ChatSection:NewButton("Infinity Yield", "FE Admin Commands runner.", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
--- OTHER SCRIPTS
-local OtherScripts = Window:NewTab("Other Scripts")
-local OtherScriptsSection = OtherScripts:NewSection("Other Scripts - iWare")
+-- SCRIPT HUB
+local ScriptHub = Window:NewTab("Other Scripts")
+local ScriptHubSection = ScriptHub:NewSection("Script Hub - iWare")
 
-OtherScriptsSection:NewButton("Owl Hub", "Powerful cheat hub that supports over 30+ games.", function()
+ScriptHubSection:NewButton("Owl Hub", "Powerful cheat hub that supports over 30+ games.", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt'))()
 end)
 
-OtherScriptsSection:NewButton("EmoteHUB", "Emote GUI with a lot of emotes.", function()
+ScriptHubSection:NewButton("EmoteHUB", "Emote GUI with a lot of emotes.", function()
     loadstring(game:HttpGet("https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/R15GUI.lua"))()
 end)
  
