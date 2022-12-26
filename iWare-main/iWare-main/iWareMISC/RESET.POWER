@@ -1,0 +1,3 @@
+game.Players.localPlayer.Character.Humanoid.WalkSpeed = 16
+
+game.Players.localPlayer.Character.Humanoid.JumpPower = 50
