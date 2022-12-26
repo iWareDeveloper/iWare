@@ -38,10 +38,10 @@ Player:AddButton({
   	end    
 })
 
-Player:AddButton({"))()
+Player:AddButton({
 	Name = "NoClip ( E ),
 	Callback = function()
-      		loadstring(game:HttpsGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/NOCLIP"))()
+      		loadstring(game:HttpsGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/NOCLIP'))()
   	end    
 })
 
