@@ -1,103 +1,198 @@
 -- Made with love by iEge.
 -- You can use it without giving us a credit.
--- iWare v1
+-- iWare BETA
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("                                         ⊙ɪᴡᴀʀᴇ ʙᴇᴛᴀ⊙", "BloodTheme")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "iWare | BETA", HidePremium = false,IntroText = "iWare | Discord.io/iWareX", SaveConfig = true, ConfigFolder = "iWareCFG"})
 
 -- MAIN
-local Main = Window:NewTab("⊙ Main")
-local MainSection = Main:NewSection("Thank you for using iWare BETA!")
+local Main = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4034483344",
+	PremiumOnly = false
+})
 
-MainSection:NewKeybind("GUI Toggle", "Sets a keybind to turn the GUI on/off.", Enum.KeyCode.F, function()
-	Library:ToggleUI()
-end)
+local Section = Main:AddSection({
+	Name = "Thank you for using iWare | BETA!"
+})
 
--- AIM
-local Aim = Window:NewTab("⊙ Aim")
-local AimSection = Aim:NewSection("Aim Section - iWare")
+local Section = Main:AddSection({
+	Name = "If you want any help with the script -> Discord.io/iWareX"
+})
 
-AimSection:NewButton("Aimlock ( No Team Check )", "Locks your camera into your opponents head!", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/AIMLOCK.NTC'))()
-end)
+--PLAYER
+local Player = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://2795572800",
+	PremiumOnly = false
+})
 
--- PLAYER
-local Player = Window:NewTab("⊙ Player")
-local PlayerSection = Player:NewSection("Player Section - iWare")
+local Section = Player:AddSection({
+	Name = "Abilities"
+})
 
-PlayerSection:NewButton("Fly", "Allows you to fly!", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/FLY'))()
-end)
+Player:AddButton({
+	Name = "Fly",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/FLY'))()
+  	end    
+})
 
-PlayerSection:NewToggle("WalkSpeed Changer", "Makes you walk so fast! ", function(state)
-    if state then
-        game.Players.localPlayer.Character.Humanoid.WalkSpeed = 130
-    else
-        game.Players.localPlayer.Character.Humanoid.WalkSpeed = 16
-    end
-end)
+Player:AddButton({
+	Name = "Wall Walk",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/WALLWALK'))()
+  	end    
+})
 
-PlayerSection:NewToggle("JumpHeight Changer", "Makes you jump even more higher!", function(state)
-if state then
-        game.Players.localPlayer.Character.Humanoid.JumpPower = 130
-    else
-        game.Players.localPlayer.Character.Humanoid.JumpPower = 50
-    end
-end) 
+Player:AddButton({
+	Name = "Click Teleport | CRTL + CLICK |",
+	Callback = function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/CLICKTP'))()
+  	end    
+})
 
-PlayerSection:NewButton("Wall Walk", "Allows you to walk on walls just like spiders!", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/WALLWALK'))()
-end)
+local Section = Player:AddSection({
+	Name = "Powers"
+})
 
-PlayerSection:NewButton("Click Teleport ( CTRL + CLICK )", "Allows you to teleport anywhere u like!", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/CLICKTP'))()
-end)
+Player:AddButton({
+	Name = "Walkspeed Changer",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/WALKSPEED.CHANGE'))()
+  	end    
+})
+
+Player:AddButton({
+	Name = "JumpHeight Changer",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/JUMPHEIGHT.CHANGE'))()
+  	end    
+})
+
+local Section = Player:AddSection({
+	Name = "Reset"
+})
+
+Player:AddButton({
+	Name = "Reset All Powers",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/RESET.POWER'))()
+  	end    
+})
 
 -- VISUALS
-local Visuals = Window:NewTab("⊙ Visuals")
-local VisualsSection = Visuals:NewSection("Visual Section - iWare")
+local Visuals = Window:MakeTab({
+	Name = "Visuals",
+	Icon = "rbxassetid://6523858394",
+	PremiumOnly = false
+})
 
-VisualsSection:NewButton("Chams ( Team Check )", "It allows you to see your opponents through walls.", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/CHAMS.TC'))()
-end)
+local Section = Visuals:AddSection({
+	Name = "Abilities"
+})
 
-VisualsSection:NewButton("Chams ( No Team Check )", "It allows you to see everyones name through walls.", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/CHAMS.NTC'))()
-end)
+Visuals:AddButton({
+	Name = "ESP | Team Check |",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/ESP.TC'))()
+  	end    
+})
 
-VisualsSection:NewButton("ESP ( Team Check )", "It allows yo to see your opponents name through walls.", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/ESP.TC'))()
-end)
+Visuals:AddButton({
+	Name = "ESP | No Team Check |",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/ESP.NTC'))()
+  	end    
+})
 
-VisualsSection:NewButton("ESP ( No Team Check )", "It allows yo to see everyones name through walls.", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/ESP.NTC'))()
-end)
+Visuals:AddButton({
+	Name = "Chams | Team Check |",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/CHAMS.TC'))()
+  	end    
+})
 
-VisualsSection:NewButton("Triggerbot", "Automaticly shoots when you aim at someone.", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/TRIGGERBOT'))()
-end)
+Visuals:AddButton({
+	Name = "Chams | No Team Check |",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/CHAMS.NTC'))()
+  	end    
+})
+
+-- AIM
+local Aim = Window:MakeTab({
+	Name = "Aim",
+	Icon = "rbxassetid://9472683573",
+	PremiumOnly = false
+})
+
+local Section = Aim:AddSection({
+	Name = "Abilities"
+})
+
+Aim:AddButton({
+	Name = "Aimlock | No Team Check |",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/AIMLOCK.NTC'))()
+  	end    
+})
+
+Aim:AddButton({
+	Name = "Triggerbot",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/TRIGGERBOT'))()
+  	end    
+})
 
 -- CHAT
-local Chat = Window:NewTab("⊙ Chat")
-local ChatSection = Chat:NewSection("Chat Section - iWare")
+local Chat = Window:MakeTab({
+	Name = "Chat",
+	Icon = "rbxassetid://7164927415",
+	PremiumOnly = false
+})
 
-ChatSection:NewButton("Chat Spoofer", "Basic Chat Spoofer.", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/CHATSPOOFER'))()
-end)
+local Section = Chat:AddSection({
+	Name = "Tools"
+})
 
-ChatSection:NewButton("Infinity Yield", "FE Admin Commands runner.", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
+Chat:AddButton({
+	Name = "Chat Spoofer",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/CHATSPOOFER'))()
+  	end    
+})
+
+Chat:AddButton({
+	Name = "Infinity Yield | ADMIN COMMAND PROMPT |",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  	end    
+})
 
 -- SCRIPT HUB
-local ScriptHub = Window:NewTab("⊙ Script Hub")
-local ScriptHubSection = ScriptHub:NewSection("Script Hub - iWare")
+local SH = Window:MakeTab({
+	Name = "Script Hub",
+	Icon = "rbxassetid://11570895459",
+	PremiumOnly = false
+})
 
-ScriptHubSection:NewButton("Owl Hub", "Powerful cheat hub that supports over 30+ games.", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt'))()
-end)
+local Section = SH:AddSection({
+	Name = "Other Cool Scripts"
+})
 
-ScriptHubSection:NewButton("EmoteHUB", "Emote GUI with a lot of emotes.", function()
-    loadstring(game:HttpGet("https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/R15GUI.lua"))()
-end)
- 
+SH:AddButton({
+	Name = "Owl Hub",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt'))()
+  	end    
+})
+
+SH:AddButton({
+	Name = "EmoteHUB",
+	Callback = function()
+      		loadstring(game:HttpGet("https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/R15GUI.lua"))()
+  	end    
+})
+
+OrionLib:Init()
