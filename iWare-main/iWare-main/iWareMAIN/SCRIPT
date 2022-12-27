@@ -46,6 +46,13 @@ Player:AddButton({
 })
 
 Player:AddButton({
+	Name = "Infinite Jump",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/INFJUMP'))()
+  	end    
+})
+
+Player:AddButton({
 	Name = "Wall Walk",
 	Callback = function()
       		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/WALLWALK'))()
