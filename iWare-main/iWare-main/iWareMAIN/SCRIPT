@@ -2,8 +2,6 @@
 -- You can use it without giving us a credit.
 -- iWare BETA
 
-x=msgbox("Thank you for using iWare! - https://discord.io/iWareX", Button+Icon, "iWare")
-
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "iWare | BETA", HidePremium = false,IntroText = "iWare | Discord.io/iWareX", SaveConfig = true, ConfigFolder = "iWareCFG"})
 
