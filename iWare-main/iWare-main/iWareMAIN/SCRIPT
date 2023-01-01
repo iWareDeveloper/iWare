@@ -60,13 +60,6 @@ Player:AddButton({
 })
 
 Player:AddButton({
-	Name = "Mouse Fling",
-	Callback = function()
-                loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/MOUSEFLING'))()
-  	end    
-})
-
-Player:AddButton({
 	Name = "Click Teleport | CRTL + CLICK |",
 	Callback = function()
                 loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/CLICKTP'))()
