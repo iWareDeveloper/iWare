@@ -216,6 +216,13 @@ SH:AddButton({
   	end    
 })
 
+SH:AddButton({
+	Name = "iWare | ☃️Survive and Kill the Killers in Area 51 !",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/SAKTK"))()
+  	end    
+})
+
 local Section = SH:AddSection({
 	Name = "Extra Scripts"
 })
