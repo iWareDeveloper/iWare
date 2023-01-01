@@ -1,0 +1,175 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "iWare | ⚡ Legends of Speed", HidePremium = false,IntroText = "iWare | Discord.io/iWareX", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--DEĞERLER
+_G.autoGem = true
+_G.autoStep = true
+_G.autoHoop = true
+_G.autoRB = true
+_G.autoGP = true
+
+--FONKSİYONLAR
+function autoGem()
+    while _G.autoGem == true do
+        game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb","Gem","City")
+        wait(.001)
+    end
+end
+
+function autoStep()
+    while _G.autoStep == true do
+        game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb","Red Orb","City")
+        game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb","Blue Orb","City")
+        game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb","Orange Orb","City")
+        wait(.001)
+    end
+end
+
+function autoHoop()
+    while _G.autoHoop == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-536.465087890625, 71.82533264160156, -133.0884552001953)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-538.7976684570312, 67.98322296142578, 207.90647888183594)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-85.4810562133789, 122.32540893554688, -108.3345947265625)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(230.22203063964844, 108.01388549804688, 89.60247802734375)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-492.2716369628906, 104.74365997314453, 2499.788818359375)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11089.5712890625, 208.58853149414062, 4465.2275390625)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1809.400146484375, 96.69343566894531, 4614.10986328125)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2065.4462890625, 162.92962646484375, 4372.24169921875)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13138.4853515625, 205.44810485839844, 4465.685546875)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13251.326171875, 230.50680541992188, 4892.13623046875)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12994.0185546875, 206.8688507080078, 5222.10595703125)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3980.49609375, 165.16552734375, 5585.95947265625)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4650.5615234375, 226.60818481445312, 5607.3486328125)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5391.06396484375, 304.3329162597656, 5887.5791015625)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5657.0087890625, 330.1373291015625, 6493.8994140625)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5361.16357421875, 303.6231689453125, 7026.109375)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4517.044921875, 226.23318481445312, 7186.25732421875)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3806.516845703125, 300.54937744140625, 7223.9921875)
+        wait(0,5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-535.3016357421875, 3.9489965438842773, 608.6669311523438)
+    end
+end
+
+function autoRB()
+    while _G.autoRB == true do
+        game:GetService("ReplicatedStorage").rEvents.rebirthEvent:FireServer("rebirthRequest")
+        wait(.001)
+    end
+end
+
+function autoGP()
+    while _G.autoGP == true do
+        game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","City")
+        game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Snow City")
+        game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+        wait(.001)
+    end
+end
+
+--MAIN
+local Main = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4034483344",
+	PremiumOnly = false
+})
+
+local Section = Main:AddSection({
+	Name = "Thank you for using iWare! Discord.io/iWareX"
+})
+
+--AUTO
+local Auto = Window:MakeTab({
+	Name = "Auto's",
+	Icon = "rbxassetid://11322093465",
+	PremiumOnly = false
+})
+
+local Section = Auto:AddSection({
+	Name = "Abilities"
+})
+
+Auto:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(Value)
+		_G.autoRB = Value
+        autoRB()
+	end    
+})
+
+--FARM
+local Farm = Window:MakeTab({
+	Name = "Farm",
+	Icon = "rbxassetid://11956055886",
+	PremiumOnly = false
+})
+
+local Section = Farm:AddSection({
+	Name = "Abilities"
+})
+
+Farm:AddToggle({
+	Name = "Autofarm Gems",
+	Default = false,
+	Callback = function(Value)
+		_G.autoGem = Value
+        autoGem()
+	end    
+})
+
+Farm:AddToggle({
+	Name = "Autofarm Steps",
+	Default = false,
+	Callback = function(Value)
+		_G.autoStep = Value
+        autoStep()
+	end    
+})
+
+Farm:AddToggle({
+	Name = "Collect All Hoops",
+	Default = false,
+	Callback = function(Value)
+		_G.autoHoop = Value
+        autoHoop()
+	end    
+})
+
+--PET
+local Pet = Window:MakeTab({
+	Name = "Pet",
+	Icon = "rbxassetid://8285136245",
+	PremiumOnly = false
+})
+
+local Section = Pet:AddSection({
+	Name = "Open and wait until your pet stops leveling up. Do not get the orbs!"
+})
+
+Pet:AddToggle({
+	Name = "Auto Glitch Pet",
+	Default = false,
+	Callback = function(Value)
+		_G.autoGP = Value
+        autoGP()
+	end    
+})
+
+OrionLib:Init()
