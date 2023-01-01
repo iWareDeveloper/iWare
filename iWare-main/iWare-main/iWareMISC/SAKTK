@@ -50,7 +50,7 @@ Auto:AddButton({
         wait(1)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(201.0552215576172, 301.699951171875, 160.38807678222656)
         wait(1)
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(114.51575469970703, 335.89990234375, 571.0228271484375)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(114.43312072753906, 335.89990234375, 571.3029174804688)
         wait(1)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(232.16990661621094, 373.8998718261719, 49.30203628540039)
         wait(1)
