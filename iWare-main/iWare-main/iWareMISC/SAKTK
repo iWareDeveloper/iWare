@@ -1,0 +1,63 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "iWare | ☃️Survive and Kill the Killers in Area 51 !", HidePremium = false,IntroText = "iWare | Discord.io/iWareX", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--VALUES
+
+--FUNCTIONS
+
+--MAIN
+local Main = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4034483344",
+	PremiumOnly = false
+})
+
+local Section = Main:AddSection({
+	Name = "Thank you for using iWare! Discord.io/iWareX"
+})
+
+--AUTO
+local Auto = Window:MakeTab({
+	Name = "Auto's",
+	Icon = "rbxassetid://11322093465",
+	PremiumOnly = false
+})
+
+local Section = Auto:AddSection({
+	Name = "Abilities"
+})
+
+Auto:AddButton({
+	Name = "Get All Guns",
+	Callback = function()
+      	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(148.04974365234375, 259.9001770019531, 326.2985534667969)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(57.29818344116211, 294.0199279785156, 263.7308349609375)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(70.58358001708984, 281.900146484375, 30.498363494873047)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(137.75909423828125, 333.69989013671875, 501.2958068847656)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(157.3148956298828, 343.9002685546875, 607.3074340820312)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-155.521240234375, 303.89971923828125, 767.8536376953125)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-147.6993865966797, 313.8997802734375, 280.2547302246094)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.899397850036621, 268.10015869140625, 187.30101013183594)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(320.0846862792969, 272.1001892089844, 142.84185791015625)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(201.0552215576172, 301.699951171875, 160.38807678222656)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(114.51575469970703, 335.89990234375, 571.0228271484375)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(232.16990661621094, 373.8998718261719, 49.30203628540039)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(377.07794189453125, 323.89990234375, 651.9264526367188)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-103.7018051147461, 313.4996643066406, 460.86163330078125)
+        wait(1)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(262.26092529296875, 524.5006103515625, 432.5227355957031)
+  	end    
+})
