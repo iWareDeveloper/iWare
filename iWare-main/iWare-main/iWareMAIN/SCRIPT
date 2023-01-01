@@ -206,7 +206,18 @@ local SH = Window:MakeTab({
 })
 
 local Section = SH:AddSection({
-	Name = "Other Cool Scripts"
+	Name = "Other iWare Scripts"
+})
+
+SH:AddButton({
+	Name = "iWare | ⚡ Legends of Speed",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/LOF.iWare"))()
+  	end    
+})
+
+local Section = SH:AddSection({
+	Name = "Extra Scripts"
 })
 
 SH:AddButton({
