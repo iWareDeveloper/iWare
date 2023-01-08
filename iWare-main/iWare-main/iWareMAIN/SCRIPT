@@ -230,6 +230,13 @@ SH:AddButton({
   	end    
 })
 
+SH:AddButton({
+	Name = "iWare | Tower of God AUTOFARM",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/TOG.AUTOFARM"))()
+  	end    
+})
+
 local Section = SH:AddSection({
 	Name = "Extra Scripts"
 })
@@ -253,6 +260,20 @@ SH:AddButton({
 	Name = "CFrame Grabber",
 	Callback = function()
       		loadstring(game:HttpGet("https://guard.lol/scripts/cguard.lua",true))()
+  	end    
+})
+
+SH:AddButton({
+	Name = "Remote Spy",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/REMOTESPY"))()
+  	end    
+})
+
+SH:AddButton({
+	Name = "Dark Dex",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/DARK.DEX"))()
   	end    
 })
 
