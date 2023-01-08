@@ -20,6 +20,13 @@ local Section = Main:AddSection({
 	Name = "If you want any help with the script -> Discord.io/iWareX"
 })
 
+Main:AddButton({
+	Name = "Re-Execute The Script",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMAIN/SCRIPT'))()
+  	end    
+})
+
 --PLAYER
 local Player = Window:MakeTab({
 	Name = "Player",
