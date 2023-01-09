@@ -284,4 +284,11 @@ SH:AddButton({
   	end    
 })
 
+SH:AddButton({
+	Name = "Faded | Da Hood |",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded-Grid/main/YesEpic", true))()
+  	end    
+})
+
 OrionLib:Init()
