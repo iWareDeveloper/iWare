@@ -5,6 +5,12 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "iWare | BETA", HidePremium = false,IntroText = "iWare | Discord.io/iWareX", SaveConfig = true, ConfigFolder = "iWareCFG"})
 
+--VALUES
+
+
+--FUNCTIONS
+
+
 -- MAIN
 local Main = Window:MakeTab({
 	Name = "Main",
@@ -84,18 +90,30 @@ local Section = Player:AddSection({
 	Name = "Powers"
 })
 
-Player:AddButton({
-	Name = "Walkspeed Changer",
-	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/WALKSPEED.CHANGE'))()
-  	end    
+Player:AddSlider({
+	Name = "WalkSpeed Changer",
+	Min = 16,
+	Max = 1000,
+	Default = 16,
+	Color = Color3.fromRGB(60,60,60),
+	Increment = 1,
+	ValueName = "WalkSpeed",
+	Callback = function(Value)
+		game.Players.localPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
 })
 
-Player:AddButton({
-	Name = "JumpHeight Changer",
-	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/JUMPHEIGHT.CHANGE'))()
-  	end    
+Player:AddSlider({
+	Name = "Jumpheight Changer",
+	Min = 46,
+	Max = 1000,
+	Default = 46,
+	Color = Color3.fromRGB(60,60,60),
+	Increment = 1,
+	ValueName = "JumpHeight",
+	Callback = function(Value)
+		game.Players.localPlayer.Character.Humanoid.JumpPower = Value
+	end    
 })
 
 local Section = Player:AddSection({
@@ -105,7 +123,7 @@ local Section = Player:AddSection({
 Player:AddButton({
 	Name = "Reset All Powers",
 	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/RESET.POWER'))()
+    		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/RESET.POWER'))()
   	end    
 })
 
