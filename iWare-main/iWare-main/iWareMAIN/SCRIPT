@@ -79,13 +79,6 @@ Player:AddButton({
   	end    
 })
 
-Player:AddButton({
-	Name = "Developer Tools",
-	Callback = function()
-                loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/BTOOLS'))()
-  	end    
-})
-
 local Section = Player:AddSection({
 	Name = "Powers"
 })
