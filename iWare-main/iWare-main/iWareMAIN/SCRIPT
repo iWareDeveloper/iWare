@@ -105,9 +105,9 @@ Player:AddSlider({
 
 Player:AddSlider({
 	Name = "Jumpheight Changer",
-	Min = 46,
+	Min = 26,
 	Max = 1000,
-	Default = 46,
+	Default = 26,
 	Color = Color3.fromRGB(60,60,60),
 	Increment = 1,
 	ValueName = "JumpHeight",
