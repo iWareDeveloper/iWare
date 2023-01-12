@@ -242,6 +242,24 @@ Dev:AddButton({
   	end    
 })
 
+local Section = Dev:AddSection({
+	Name = "Developer Tools"
+})
+
+Dev:AddButton({
+	Name = "Move Tool",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/MOVE.TOOL"))()
+  	end    
+})
+
+Dev:AddButton({
+	Name = "Delete Tool",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/DELETE.TOOL"))()
+  	end    
+})
+
 -- SCRIPT HUB
 local SH = Window:MakeTab({
 	Name = "Script Hub",
