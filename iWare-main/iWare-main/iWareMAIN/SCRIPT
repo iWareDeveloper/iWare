@@ -300,45 +300,6 @@ SH:AddButton({
 })
 
 local Section = SH:AddSection({
-	Name = "Counter Blox Scripts"
-})
-
-SH:AddButton({
-	Name = "Hexagon",
-	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/CounterBlox.lua', true))()
-  	end    
-})
-
-SH:AddButton({
-	Name = "Pikaware",
-	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/CatzCode/PikaHub/main/main.lua"))()
-  	end    
-})
-
-SH:AddButton({
-	Name = "Bloxtap",
-	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/BLOXTAP"))()
-  	end    
-})
-
-SH:AddButton({
-	Name = "CB Loader",
-	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Danixik/LoaderV3/main/Main.lua", true))()
-  	end    
-})
-
-SH:AddButton({
-	Name = "FPS Gui Aimlock",
-	Callback = function()
-      		loadstring(game:HttpGet("https://pastebin.com/RPsLaHQh"))()
-  	end    
-})
-
-local Section = SH:AddSection({
 	Name = "Extra Scripts"
 })
 
