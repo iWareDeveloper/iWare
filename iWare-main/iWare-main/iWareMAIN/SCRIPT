@@ -406,4 +406,11 @@ SH:AddButton({
   	end    
 })
 
+SH:AddButton({
+	Name = "RayX",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/SpaceYes/Lua/Main/DaHood.Lua'))()
+  	end    
+})
+
 OrionLib:Init()
