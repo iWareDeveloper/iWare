@@ -292,6 +292,13 @@ SH:AddButton({
   	end    
 })
 
+SH:AddButton({
+	Name = "iWare | Bloody Ragdoll Engine R6!",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/BRE.SCRIPT"))()
+  	end    
+})
+
 local Section = SH:AddSection({
 	Name = "Extra Scripts"
 })
