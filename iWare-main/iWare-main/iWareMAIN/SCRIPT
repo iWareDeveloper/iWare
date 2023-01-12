@@ -223,6 +223,25 @@ Chat:AddButton({
   	end    
 })
 
+--DEVELOPER
+local Dev = Window:MakeTab({
+	Name = "Developer",
+	Icon = "rbxassetid://10885640682",
+	PremiumOnly = false
+})
+
+local Section = Dev:AddSection({
+	Name = "Developer Feature's"
+})
+
+
+Dev:AddButton({
+	Name = "Get Gamepasses ( NOT WORKS IN EVERY GAME)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/GAMEPASS"))()
+  	end    
+})
+
 -- SCRIPT HUB
 local SH = Window:MakeTab({
 	Name = "Script Hub",
