@@ -1,0 +1,66 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "iWare |  Bloody Ragdoll Engine", HidePremium = false,IntroText = "iWare | Discord.io/iWareX", SaveConfig = true, ConfigFolder = "iWareCFG"})
+
+--VALUES
+_G.antiRagdoll = true
+
+--FUNCTIONS
+function antiRagdoll()
+    while _G.antiRagdoll == true do
+        game:GetService("ReplicatedStorage").Events.RagdollEvent:FireServer(false)
+        wait(.001)
+    end
+end
+      
+--MAIN
+local Main = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4034483344",
+	PremiumOnly = false
+})
+
+local Section = Main:AddSection({
+	Name = "Thank you for using iWare | BETA!"
+})
+
+local Section = Main:AddSection({
+	Name = "If you want any help with the script -> Discord.io/iWareX"
+})
+
+Main:AddButton({
+	Name = "Re-Execute The Script",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMAIN/SCRIPT'))()
+  	end    
+})
+
+--PLAYER
+local Player = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://2795572800",
+	PremiumOnly = false
+})
+
+local Section = Player:AddSection({
+	Name = "Abilities"
+})
+
+Player:AddToggle({
+	Name = "Anti Ragdoll",
+	Default = false,
+	Callback = function(Value)
+		_G.antiRagdoll = Value
+        antiRagdoll()
+	end    
+})
+
+local Section = Player:AddSection({
+	Name = "Extras"
+})
+
+Player:AddButton({
+	Name = "Hitbox Extender",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/shit%20script%20pack/CheatX'))()
+  	end    
+})
