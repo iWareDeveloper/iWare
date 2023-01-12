@@ -1,5 +1,3 @@
---by me_ozoneYT YT chanel :https://www.youtube.com/channel/UCOUFlqujCTz0UfBsrNbvJFA
-
 local function a(b, c)
     local d = getfenv(c)
     local e =
@@ -28,7 +26,7 @@ local m = Instance.new("Tool")
 local n = Instance.new("Part")
 local o = Instance.new("Script")
 local p = Instance.new("LocalScript")
-m.Name = "Delet Tool"
+m.Name = "Delete Tool"
 m.Parent = l
 m.Grip = CFrame.new(0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 m.GripForward = Vector3.new(-0, -1, -0)
