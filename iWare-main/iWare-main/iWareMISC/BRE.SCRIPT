@@ -54,6 +54,32 @@ Player:AddToggle({
 	end    
 })
 
+Player:AddSlider({
+	Name = "WalkSpeed Changer",
+	Min = 16,
+	Max = 1000,
+	Default = 16,
+	Color = Color3.fromRGB(60,60,60),
+	Increment = 1,
+	ValueName = "WalkSpeed",
+	Callback = function(Value)
+		game.Players.localPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+
+Player:AddSlider({
+	Name = "Jumpheight Changer",
+	Min = 26,
+	Max = 1000,
+	Default = 26,
+	Color = Color3.fromRGB(60,60,60),
+	Increment = 1,
+	ValueName = "JumpHeight",
+	Callback = function(Value)
+		game.Players.localPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
 local Section = Player:AddSection({
 	Name = "Extras"
 })
