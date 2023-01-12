@@ -339,4 +339,11 @@ SH:AddButton({
   	end    
 })
 
+SH:AddButton({
+	Name = "Hitbox Expander",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/shit%20script%20pack/CheatX"))()
+  	end    
+})
+
 OrionLib:Init()
