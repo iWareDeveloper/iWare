@@ -51,6 +51,17 @@ Server:AddButton({
   	end    
 })
 
+local Section = Server:AddSection({
+	Name = "Other's"
+})
+
+Server:AddButton({
+	Name = "Fps Unlocker",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/FPSUNLOCKER"))()
+  	end    
+})
+
 --PLAYER
 local Player = Window:MakeTab({
 	Name = "Player",
