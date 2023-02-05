@@ -465,3 +465,14 @@ SH:AddButton({
 })
 
 OrionLib:Init()
+
+--NOTIFICATION
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "iWare";
+ Text = "The Script is Executed Successfully!";
+ Icon = "rbxassetid://10590477428";
+ Duration = 20000;
+ Button1 = "Discord.io/iWareX";
+ Button2 = "";
+ Callback = NotificationBindable;
+})
