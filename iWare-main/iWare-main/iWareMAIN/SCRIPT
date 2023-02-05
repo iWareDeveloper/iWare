@@ -297,6 +297,10 @@ local SH = Window:MakeTab({
 })
 
 local Section = SH:AddSection({
+	Name = "Some Scripts May Not Execute!"
+})
+
+local Section = SH:AddSection({
 	Name = "Other iWare Scripts"
 })
 
@@ -439,6 +443,24 @@ SH:AddButton({
 	Name = "RayX",
 	Callback = function()
       		loadstring(game:HttpGet('https://raw.githubusercontent.com/SpaceYes/Lua/Main/DaHood.Lua'))()
+  	end    
+})
+
+local Section = SH:AddSection({
+	Name = "Jailbreak Scripts"
+})
+
+SH:AddButton({
+	Name = "Vynixius",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Loader.lua"))()
+  	end    
+})
+
+SH:AddButton({
+	Name = "Jailbreaker Free | AutoRob |",
+	Callback = function()
+      		loadstring(game:HttpGet('https://scripts.luawl.com/14245/JailbreakerFree.lua'))()
   	end    
 })
 
