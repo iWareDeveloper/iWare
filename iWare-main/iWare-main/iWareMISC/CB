@@ -10,7 +10,20 @@ OrionLib:MakeNotification({
 })
 OrionLib:Init()
 
---AIMBOT
+--MAIN
+local Main = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4034483344",
+	PremiumOnly = false
+})
+
+Main:AddButton({
+	Name = "Re-Execute The Script",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/CB'))()
+  	end    
+})
+
 -- AIM
 local Aim = Window:MakeTab({
 	Name = "Aim",
