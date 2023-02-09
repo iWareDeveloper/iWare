@@ -1,0 +1,58 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Fade v1", HidePremium = false, SaveConfig = true,IntroText = "Fade v1", ConfigFolder = "OrionTest"})
+
+--NOTIFICATION
+OrionLib:MakeNotification({
+	Name = "Fade",
+	Content = "Motherfucker enjoy exploiting.",
+	Image = "rbxassetid://11948032342",
+	Time = 5
+})
+OrionLib:Init()
+
+--AIMBOT
+-- AIM
+local Aim = Window:MakeTab({
+	Name = "Aim",
+	Icon = "rbxassetid://9472683573",
+	PremiumOnly = false
+})
+
+local Section = Aim:AddSection({
+	Name = "Features"
+})
+
+Aim:AddButton({
+	Name = "RClick Aimlock",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/LOCK"))()
+  	end    
+})
+
+--VISUALS
+local Visuals = Window:MakeTab({
+	Name = "Visuals",
+	Icon = "rbxassetid://6523858394",
+	PremiumOnly = false
+})
+
+local Section = Visuals:AddSection({
+	Name = "Features"
+})
+
+Visuals:AddButton({
+	Name = "Box ESP | Team Check |",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/BOX-ESP'))()
+  	end    
+})
+
+--CREDITS
+local Credits = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://11570895459",
+	PremiumOnly = false
+})
+
+Credits:AddParagraph("GUI","by cMolten#0001")
+Credits:AddParagraph("Scripts and Features"," by iEge")
