@@ -424,6 +424,13 @@ SH:AddButton({
 })
 
 SH:AddButton({
+	Name = "Vynixius",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Loader.lua"))()
+  	end    
+})
+
+SH:AddButton({
 	Name = "Unnamed Doors GUI",
 	Callback = function()
       		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/UNNAMEDDOORSGUI'))()
