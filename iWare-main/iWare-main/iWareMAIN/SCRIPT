@@ -138,14 +138,33 @@ Player:AddSlider({
 
 Player:AddSlider({
 	Name = "Jumpheight Changer",
-	Min = 26,
+	Min = 46,
 	Max = 1000,
-	Default = 26,
+	Default = 46,
 	Color = Color3.fromRGB(60,60,60),
 	Increment = 1,
 	ValueName = "JumpHeight",
 	Callback = function(Value)
 		game.Players.localPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
+Player:AddSlider({
+	Name = "TPWalk",
+	Min = 0,
+	Max = 100,
+	Default = 0,
+	Color = Color3.fromRGB(60,60,60),
+	Increment = 1,
+	ValueName = "TPWalk",
+	Callback = function(Value)
+		local Character = game.Players.LocalPlayer.Character
+		local Humanoid = Character.Humanoid
+		local TargetWalkspeed = Value
+
+		game:GetService("RunService").Heartbeat:Connect(function(deltaTime)
+    Character:TranslateBy(Humanoid.MoveDirection * TargetWalkspeed * deltaTime)
+end)
 	end    
 })
 
