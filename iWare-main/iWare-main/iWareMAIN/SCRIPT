@@ -413,6 +413,31 @@ SH:AddButton({
 })
 
 local Section = SH:AddSection({
+	Name = "Doors Scripts"
+})
+
+SH:AddButton({
+	Name = "TerminalVibes",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/OminousVibes-Exploit/Scripts/main/doors/loadstring.lua"))()
+  	end    
+})
+
+SH:AddButton({
+	Name = "Unnamed Doors GUI",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/UNNAMEDDOORSGUI'))()
+  	end    
+})
+
+SH:AddButton({
+	Name = "Pathfinder to A-1000",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/BY%20GEODUDE%20not%20me'))()
+  	end    
+})
+
+local Section = SH:AddSection({
 	Name = "Counter Blox Scripts"
 })
 
