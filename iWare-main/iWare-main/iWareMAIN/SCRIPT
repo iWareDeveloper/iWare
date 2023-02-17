@@ -444,6 +444,13 @@ SH:AddButton({
   	end    
 })
 
+SH:AddButton({
+	Name = "Tablet in the Rift",
+	Callback = function()
+      		loadstring(game:HttpGet('https://pastebin.com/raw/bucRxAMi'))()
+  	end    
+})
+
 local Section = SH:AddSection({
 	Name = "Counter Blox Scripts"
 })
