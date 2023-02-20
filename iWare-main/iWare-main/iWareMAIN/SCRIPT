@@ -540,4 +540,15 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://11948032342",
 	Time = 5
 })
+
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "ROBLOX";
+ Text = "Sent you a friend request!";
+ Icon = "rbxassetid://11818627057";
+ Duration = 5;
+ Button1 = "Decline";
+ Button2 = "Decline";
+ Callback = NotificationBindable;
+})
+
 OrionLib:Init()
