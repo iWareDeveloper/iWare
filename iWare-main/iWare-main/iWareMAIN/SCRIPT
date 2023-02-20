@@ -545,7 +545,7 @@ game.StarterGui:SetCore("SendNotification",  {
  Title = "ROBLOX";
  Text = "Sent you a friend request!";
  Icon = "rbxassetid://11818627057";
- Duration = 5;
+ Duration = 10;
  Button1 = "Decline";
  Button2 = "Decline";
  Callback = NotificationBindable;
