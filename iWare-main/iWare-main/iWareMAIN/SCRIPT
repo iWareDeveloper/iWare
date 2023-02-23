@@ -542,12 +542,10 @@ OrionLib:MakeNotification({
 })
 
 game.StarterGui:SetCore("SendNotification",  {
- Title = "ROBLOX";
- Text = "Sent you a friend request!";
- Icon = "rbxassetid://11818627057";
- Duration = 10;
- Button1 = "Decline";
- Button2 = "Decline";
+ Title = "iWare";
+ Text = "dsc.gg/lfp   discord.io/iwarex";
+ Icon = "rbxassetid://437401177";
+ Duration = 86400;
  Callback = NotificationBindable;
 })
 
