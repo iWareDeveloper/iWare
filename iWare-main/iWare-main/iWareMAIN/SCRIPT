@@ -3,7 +3,7 @@
 -- iWare BETA
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "iWare | BETA", HidePremium = false,IntroText = "iWare | Discord.io/iWareX",IntroIcon = "rbxassetid://11948032342", SaveConfig = true, ConfigFolder = "iWareCFG"})
+local Window = OrionLib:MakeWindow({Name = "iWare | BETA", HidePremium = false,IntroText = "iWare | Discord.io/iWareX",IntroIcon = "rbxassetid://437401177", SaveConfig = true, ConfigFolder = "iWareCFG"})
 
 --VALUES
 
