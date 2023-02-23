@@ -533,6 +533,17 @@ SH:AddButton({
   	end    
 })
 
+local Section = SH:AddSection({
+	Name = "Build A Boat Scripts"
+})
+
+SH:AddButton({
+	Name = "Build A Boat Autofarm and Build Script",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/NooVster/v1.1/main/Source'))()
+  	end    
+})
+
 --NOTIFICATION
 OrionLib:MakeNotification({
 	Name = "iWare",
