@@ -36,8 +36,7 @@ TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.Size = UDim2.new(0, 86, 0, 24)
 TextLabel.Font = Enum.Font.Oswald
-TextLabel.Text = "Made by 7alexv7"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Text = "ez"TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
