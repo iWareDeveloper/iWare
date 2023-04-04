@@ -1,0 +1,84 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Project iWare | Doors", HidePremium = false,IntroText = "iWare | Discord.io/iWareX",IntroIcon = "rbxassetid://437401177", SaveConfig = true, ConfigFolder = "iWareCFG"})
+
+--VALUES
+_G.Sprint = true
+
+--FUNC
+function Sprint()
+  while _G.Sprint == true do
+  game.Players.localPlayer.Character.Humanoid.WalkSpeed = 21
+  wait(0)
+  game.Players.localPlayer.Character.Humanoid.WalkSpeed = 21
+  wait(0)
+  end
+end
+
+-- MAIN
+local Main = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4034483344",
+	PremiumOnly = false
+})
+
+Main:AddParagraph("Project iWare","Thank you for using Project iWare. Enjoy exploiting.")
+Main:AddParagraph("Need help?","Type discord.io/iwarex into your browser and join our discord server then you can tell us the problem that ur facing with.")
+
+--PLAYER
+local Player = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://2795572800",
+	PremiumOnly = false
+})
+
+Player:AddToggle({
+	Name = "Sprint",
+	Default = false,
+	Callback = function(Value)
+		_G.Sprint = Value
+    Sprint()
+	end    
+})
+
+Player:AddParagraph("Sprinting","It will allow you to walk 2.5x times faster than other players.")
+
+Player:AddButton({
+	Name = "Noclip Bypasser",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/ncbypass"))()
+  	end    
+})
+
+Player:AddParagraph("Noclip Bypasser","Allows you to walk through walls without getting tpbacks. Toggle it using G.")
+
+Player:AddButton({
+	Name = "Instant Use",
+	Callback = function()
+      		local holdconnect
+    holdconnect = game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(function(p)
+		fireproximityprompt(p)
+	end)
+  	end    
+})
+
+Player:AddParagraph("Instant Use","Allows you to use items wihout holding E for too long.")
+
+--MISC
+local Misc = Window:MakeTab({
+	Name = "Miscellaneous",
+	Icon = "rbxassetid://10885640682",
+	PremiumOnly = false
+})
+
+Misc:AddButton({
+	Name = "Unlock The Rooms Door",
+	Callback = function()
+      		for i, v in pairs(workspace.CurrentRooms:GetDescendants()) do
+            if v.Name == "RoomsDoor_Entrance" then
+              v.Door.EnterPrompt.Enabled = true
+              end
+end
+  	end    
+})
+
+Misc:AddParagraph("Unlock The Rooms Door","Unlocks The Rooms door without any items.")
