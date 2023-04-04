@@ -1,5 +1,5 @@
 -- Made with love by iEge.
--- Give us credit while recording videos about it.
+-- Give us credit when recording videos about it.
 -- iWare
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
