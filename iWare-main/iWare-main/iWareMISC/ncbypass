@@ -1,4 +1,4 @@
-_G.Keybind = "R"
+_G.Keybind = "G"
 _G.ClipGui = true
 _G.IncludeNoclip = true
 
@@ -17,11 +17,11 @@ local TextLabel = Instance.new("TextLabel")
 TextLabel.Parent = ScreenGui
 
 TextLabel.AnchorPoint = Vector2.new(1, 0)
-TextLabel.Position = UDim2.new(1, -5, 0, 0)
-TextLabel.Text = "Noclip + Bypasser: Off"
-TextLabel.Size = UDim2.new(0,200,0,75)
+TextLabel.Position = UDim2.new(1, -1370, 0, 0)
+TextLabel.Text = "NC Bypasser : Off"
+TextLabel.Size = UDim2.new(0,150,0,55)
 TextLabel.TextScaled = true
-TextLabel.TextStrokeColor3 = Color3.new(1,1,1)
+TextLabel.TextStrokeColor3 = Color3.new(255,0,0)
 TextLabel.TextStrokeTransparency = 0
 TextLabel.BackgroundTransparency = 1
 
@@ -41,7 +41,7 @@ UIS.InputBegan:Connect(function(input, gp)
     if input.KeyCode == Enum.KeyCode[_G.Keybind] then
         isEnabled = not isEnabled
         task.wait()
-        TextLabel.Text = "Noclip + Bypasser: " .. getValue()
+        TextLabel.Text = "NC Bypasser : " .. getValue()
     end
 end)
 
