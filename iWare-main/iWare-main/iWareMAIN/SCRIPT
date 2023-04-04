@@ -451,6 +451,13 @@ SH:AddButton({
   	end    
 })
 
+SH:AddButton({
+	Name = "Noclip Bypass",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iWareDeveloper/iWare/main/iWare-main/iWare-main/iWareMISC/ncbypass'))()
+  	end    
+})
+
 local Section = SH:AddSection({
 	Name = "Counter Blox Scripts"
 })
