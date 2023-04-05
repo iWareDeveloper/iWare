@@ -34,7 +34,7 @@ local Player = Window:MakeTab({
 Player:AddParagraph("Player Section","The cheats that affects the Player.")
 
 local Section = Player:AddSection({
-	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+	Name = "-"
 })
 
 Player:AddToggle({
@@ -49,7 +49,7 @@ Player:AddToggle({
 Player:AddParagraph("Sprinting","It will allow you to walk 2.5x times faster than other players.")
 
 local Section = Player:AddSection({
-	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+	Name = "-"
 })
 
 Player:AddButton({
@@ -62,7 +62,7 @@ Player:AddButton({
 Player:AddParagraph("Noclip Bypasser","Allows you to walk through walls without getting tpbacks. Toggle it using G.")
 
 local Section = Player:AddSection({
-	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+	Name = "-"
 })
 
 Player:AddButton({
@@ -87,7 +87,7 @@ local TR = Window:MakeTab({
 TR:AddParagraph("The Rooms Section","The cheats that only work in The Rooms.")
 
 local Section = TR:AddSection({
-	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+	Name = "-"
 })
 
 TR:AddButton({
@@ -104,7 +104,7 @@ end
 TR:AddParagraph("Unlock The Rooms Door","Unlocks The Rooms door without any items.")
 
 local Section = TR:AddSection({
-	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+	Name = "-"
 })
 
 TR:AddButton({
@@ -133,7 +133,7 @@ end)
 TR:AddParagraph("A-90 Remover","Removes A-90 COMPLETELY in The Rooms.")
 
 local Section = TR:AddSection({
-	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+	Name = "-"
 })
 
 TR:AddButton({
@@ -159,7 +159,7 @@ local Misc = Window:MakeTab({
 Misc:AddParagraph("Miscellaneous Section","Cheats that don't need a special category.")
 
 local Section = Misc:AddSection({
-	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+	Name = "-"
 })
 
 Misc:AddButton({
