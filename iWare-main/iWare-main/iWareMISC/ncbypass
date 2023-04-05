@@ -17,7 +17,7 @@ local TextLabel = Instance.new("TextLabel")
 TextLabel.Parent = ScreenGui
 
 TextLabel.AnchorPoint = Vector2.new(1, 0)
-TextLabel.Position = UDim2.new(1, -1370, 0, 0)
+TextLabel.Position = UDim2.new(1, -11170, 0, 0)
 TextLabel.Text = "NC Bypasser : Off"
 TextLabel.Size = UDim2.new(0,150,0,55)
 TextLabel.TextScaled = true
