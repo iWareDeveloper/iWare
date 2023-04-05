@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Project iWare | Doors", HidePremium = false,IntroText = "iWare | Discord.io/iWareX",IntroIcon = "rbxassetid://437401177", SaveConfig = true, ConfigFolder = "iWareCFG"})
+local Window = OrionLib:MakeWindow({Name = "Project iWare | Doors", HidePremium = false,IntroText = "Project iWare | Doors",IntroIcon = "rbxassetid://437401177", SaveConfig = true, ConfigFolder = "iWareCFG"})
 
 --VALUES
 _G.Sprint = true
@@ -31,6 +31,12 @@ local Player = Window:MakeTab({
 	PremiumOnly = false
 })
 
+Player:AddParagraph("Player Section","The cheats that affects the Player.")
+
+local Section = Player:AddSection({
+	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+})
+
 Player:AddToggle({
 	Name = "Sprint",
 	Default = false,
@@ -42,6 +48,10 @@ Player:AddToggle({
 
 Player:AddParagraph("Sprinting","It will allow you to walk 2.5x times faster than other players.")
 
+local Section = Player:AddSection({
+	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+})
+
 Player:AddButton({
 	Name = "Noclip Bypasser",
 	Callback = function()
@@ -50,6 +60,10 @@ Player:AddButton({
 })
 
 Player:AddParagraph("Noclip Bypasser","Allows you to walk through walls without getting tpbacks. Toggle it using G.")
+
+local Section = Player:AddSection({
+	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+})
 
 Player:AddButton({
 	Name = "Instant Use",
@@ -63,14 +77,20 @@ Player:AddButton({
 
 Player:AddParagraph("Instant Use","Allows you to use items wihout holding E for too long.")
 
---MISC
-local Misc = Window:MakeTab({
-	Name = "Miscellaneous",
-	Icon = "rbxassetid://10885640682",
+--THE ROOMS
+local TR = Window:MakeTab({
+	Name = "The Rooms",
+	Icon = "rbxassetid://12122755689",
 	PremiumOnly = false
 })
 
-Misc:AddButton({
+TR:AddParagraph("The Rooms Section","The cheats that only work in The Rooms.")
+
+local Section = TR:AddSection({
+	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+})
+
+TR:AddButton({
 	Name = "Unlock The Rooms Door",
 	Callback = function()
       		for i, v in pairs(workspace.CurrentRooms:GetDescendants()) do
@@ -81,4 +101,82 @@ end
   	end    
 })
 
-Misc:AddParagraph("Unlock The Rooms Door","Unlocks The Rooms door without any items.")
+TR:AddParagraph("Unlock The Rooms Door","Unlocks The Rooms door without any items.")
+
+local Section = TR:AddSection({
+	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+})
+
+TR:AddButton({
+	Name = "Remove A-90",
+	Callback = function()
+      		 local Plr = game.Players.LocalPlayer
+local ModuleScripts = {
+   MainGame = Plr.PlayerGui.MainUI.Initiator.Main_Game,
+}
+
+ModuleScripts.MainGame.RemoteListener.Modules["A90"].Name = "Baller" 
+wait(1)
+ local mt = getrawmetatable(game)
+local old = mt.__namecall
+setreadonly(mt,false)
+mt.__namecall = newcclosure(function(self, ...)
+  local args = {...}
+  if getnamecallmethod() == 'FireServer' and self.Name == 'A90' then
+    args[1] = false
+  end
+  return old(self, unpack(args))
+end) 
+  	end    
+})
+
+TR:AddParagraph("A-90 Remover","Removes A-90 COMPLETELY in The Rooms.")
+
+local Section = TR:AddSection({
+	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+})
+
+TR:AddButton({
+	Name = "A-90 Movement Hook",
+	Callback = function()
+      		game.ReplicatedStorage.EntityInfo.A90.OnClientEvent:Connect(function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+    task.wait(1.75)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+  	end    
+})
+
+TR:AddParagraph("A-90 Movement Hook","Automatically stops your character when A-90 appears.")
+
+--MISC
+local Misc = Window:MakeTab({
+	Name = "Miscellaneous",
+	Icon = "rbxassetid://10885640682",
+	PremiumOnly = false
+})
+
+Misc:AddParagraph("Miscellaneous Section","Cheats that don't need a special category.")
+
+local Section = Misc:AddSection({
+	Name = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+})
+
+Misc:AddButton({
+	Name = "Fullbright",
+	Callback = function()
+      		local Light = game:GetService("Lighting")
+
+function dofullbright()
+Light.Ambient = Color3.new(1, 1, 1)
+Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+Light.ColorShift_Top = Color3.new(1, 1, 1)
+end
+
+dofullbright()
+
+Light.LightingChanged:Connect(dofullbright)
+  	end    
+})
+
+Misc:AddParagraph("Fullbright","Allows you to see everything in darkness.")
