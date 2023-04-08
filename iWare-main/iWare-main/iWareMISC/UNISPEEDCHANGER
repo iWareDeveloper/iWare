@@ -1,0 +1,101 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Project iWare | Universal Utility Editor", HidePremium = false,IntroText = "Project iWare | Universal Utility Editor",IntroIcon = "rbxassetid://437401177", SaveConfig = true, ConfigFolder = "iWareCFG"})
+
+--NOTIF
+OrionLib:MakeNotification({
+	Name = "Project iWare Executed",
+	Content = "Project iWare successfully executed! Enjoy!",
+	Image = "rbxassetid://437401177",
+	Time = 10
+})
+
+--VAL
+_G.WS1 = true
+_G.WS = "string"
+_G.JH = true
+
+--FUNC
+function WS1()
+  while _G.WS1 == true do
+  game.Players.localPlayer.Character.Humanoid.WalkSpeed = _G.WS
+  wait(0)
+  end
+end
+
+--MAIN
+local Main = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://11560341132",
+	PremiumOnly = false
+})
+
+Main:AddParagraph("Message From iEge","Hello! Thank you for using Project iWare! But there is a few things that you should know before using it.")
+local Section = Main:AddSection({
+	Name = "---------------------------------------------------------------------------------------------"
+})
+Main:AddParagraph("Warning #1","This script is universal however it might not work in some games!")
+local Section = Main:AddSection({
+	Name = "---------------------------------------------------------------------------------------------"
+})
+Main:AddParagraph("Warning #2","This script might get you BANNED in some games if they have a great anticheat!")
+local Section = Main:AddSection({
+	Name = "---------------------------------------------------------------------------------------------"
+})
+Main:AddParagraph("Warning #3","If your account gets BANNED from exploiting in ROBLOX or in a game thats not the script's fault. That is your fault. You accept all the things that can happen to your account by using or executing this script in an executor so if you are afraid of getting BANNED you still have a time to close this script.")
+local Section = Main:AddSection({
+	Name = "---------------------------------------------------------------------------------------------"
+})
+Main:AddParagraph("Message From iEge","Enjoy exploiting!")
+
+--UTILITIES
+local UT = Window:MakeTab({
+	Name = "Utilities",
+	Icon = "rbxassetid://12823489098",
+	PremiumOnly = false
+})
+
+UT:AddParagraph("Utilities","All features here affect the player.")
+local Section = UT:AddSection({
+	Name = "---------------------------------------------------------------------------------------------"
+})
+
+UT:AddTextbox({
+	Name = "WalkSpeed Modifier",
+	Default = "16",
+	TextDisappear = false,
+	Callback = function(Value)
+      _G.WS = Value
+	end	  
+})
+
+UT:AddToggle({
+	Name = "Enable WalkSpeed Modifier",
+	Default = false,
+	Callback = function(Value)
+		  _G.WS1 = Value
+	end    
+})
+
+--DISCORD
+local DC = Window:MakeTab({
+	Name = "Discord",
+	Icon = "rbxassetid://8387379647",
+	PremiumOnly = false
+})
+
+DC:AddParagraph("Discord","You can get the link by pressing the button below!")
+local Section = DC:AddSection({
+	Name = "---------------------------------------------------------------------------------------------"
+})
+
+DC:AddButton({
+	Name = "Discord Server Link",
+	Callback = function()
+      		OrionLib:MakeNotification({
+	Name = "Project iWare Discord",
+	Content = "Discord Server Link : dsc.gg/lfp | Discord.io/iWareX",
+	Image = "rbxassetid://437401177",
+	Time = 10
+})
+  	end    
+})
