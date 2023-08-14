@@ -45,7 +45,7 @@ Main:AddParagraph("Warning #3","If your account gets BANNED from exploiting in R
 local Section = Main:AddSection({
 	Name = "---------------------------------------------------------------------------------------------"
 })
-Main:AddParagraph("Message From iEge","Enjoy exploiting!")
+Main:AddParagraph("Message From flipsxp","Enjoy exploiting!")
 
 --UTILITIES
 local UT = Window:MakeTab({
